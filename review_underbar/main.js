@@ -3,6 +3,11 @@ const horizontalMenu = document.querySelectorAll("nav:first-child a");
 const verticalUnderLine = document.getElementById("vertical-underline");
 const verticalMenu = document.querySelectorAll("nav:nth-child(2) a");
 
+horizontalUnderLine.style.width = horizontalMenu[0].offsetWidth + "px";
+horizontalUnderLine.style.left = horizontalMenu[0].offsetLeft + "px";
+horizontalUnderLine.style.top =
+  horizontalMenu[0].offsetTop + horizontalMenu[0].offsetHeight + "px";
+
 horizontalMenu.forEach((menu) => {
   menu.addEventListener("click", (e) => {
     horizontalIndicate(e);
